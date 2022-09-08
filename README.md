@@ -1,8 +1,8 @@
 #  zencastr-interview-homework
 
 ## TODO
-- [] Build standalone REST app, 1 resource, max 3 routes.
-- [] Create docker container for service
+- [x] Build standalone REST app, 1 resource, max 3 routes.
+- [x] Create docker container for service
 - [] Create deployment and autoscaling script.
 - [] Create an integration test as a pre-commit hook
 - [] Upload to github and send to zencastr
