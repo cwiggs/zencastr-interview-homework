@@ -1,6 +1,8 @@
 package main
 
 import (
+    "fmt"
+    "log"
     "encoding/json"
 	"net/http"
 )
@@ -21,5 +23,6 @@ func PodcastHandler(w http.ResponseWriter, r *http.Request) {
 
 func main() {
     http.HandleFunc("/podcasts", PodcastHandler)
-    http.ListenAndServe(":1234", nil)
+    fmt.Println("Starting http server")
+    log.Fatal(http.ListenAndServe(":1234", nil))
 }
