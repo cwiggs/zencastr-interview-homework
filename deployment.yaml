@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: zencastr-interview-homework-deployment
+  labels:
+    app: zencastr-interview-homework
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: zencastr-interview-homework
+  template:
+    metadata:
+      labels:
+        app: zencastr-interview-homework
+    spec:
+      containers:
+      - name: zencastr-interview-homework
+        image: ghcr.io/cwiggs/zencastr-interview-homework:main
+        ports:
+        - containerPort: 1234
